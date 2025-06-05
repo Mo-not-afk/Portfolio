@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Mouadh Abidi – Information Engineering Student | HAW Hamburg</title>
+<style>
+  /* Reset & base */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+    color: #222;
+    scroll-behavior: smooth;
+    line-height: 1.6;
+  }
+  a {
+    color: #007acc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+    color: #005a9e;
+    outline: none;
+  }
+  header {
+    background-color: #003366;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2.4rem;
+  }
+  header p {
+    margin: 0.3rem 0 0;
+    font-weight: 300;
+    font-size: 1.15rem;
+  }
+  nav {
+    margin-top: 1.2rem;
+  }
+  nav a {
+    margin: 0 1.2rem;
+    font-weight: 600;
+    font-size: 1.15rem;
+  }
+  section {
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+  }
+  h2 {
+    border-bottom: 3px solid #007acc;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1.5rem;
+    color: #003366;
+  }
+  /* About */
+  #about p {
+    font-size: 1.15rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* Projects */
+  .project-list {
+    list-style-type: none;
+    padding-left: 0;
+  }
+  .project-list li {
+    background: white;
+    margin-bottom: 1.3rem;
+    padding: 1.2rem 1.8rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    font-size: 1.15rem;
+    line-height: 1.5;
+  }
+  /* Contact */
+  #contact p {
+    font-size: 1.15rem;
+    margin-bottom: 0.7rem;
+    text-align: center;
+  }
+  #contact a {
+    display: inline-block;
+    margin: 0 1rem;
+    font-weight: 600;
+  }
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: #666;
+    font-size: 0.9rem;
+  }
+
+  /* Responsive tweaks */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 1.8rem;
+    }
+    nav a {
+      margin: 0 0.6rem;
+      font-size: 1rem;
+    }
+    section {
+      margin: 2rem 1rem;
+    }
+    .project-list li {
+      padding: 1rem 1.2rem;
+      font-size: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Mouadh Abidi</h1>
+  <p>Information Engineering Student – HAW Hamburg</p>
+  <nav aria-label="Primary navigation">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+<section id="about" tabindex="-1">
+  <h2>About Me</h2>
+  <p>
+    I am a dedicated Information Engineering student at HAW Hamburg, passionate about software construction, web design, and innovative technology solutions.  
+    Skilled in programming, system design, and embedded systems, I enjoy working on projects that combine software and hardware to solve real-world problems.
+  </p>
+</section>
+
+<section id="projects" tabindex="-1">
+  <h2>Projects</h2>
+  <ul class="project-list">
+    <li><strong>Arduino Projects:</strong> Developing embedded systems with sensors, LEDs, and microcontrollers for automation and interactive applications.</li>
+    <li><strong>Robotics:</strong> Designing and programming robotic systems focused on automation, control, and intelligent behavior.</li>
+    <li><strong>Electrical Engineering Labs:</strong> Practical experiments involving circuits, signal processing, and digital systems.</li>
+    <li><strong>Software Construction:</strong> Building efficient, maintainable software applications using modern programming techniques and best practices.</li>
+  </ul>
+</section>
+
+<section id="contact" tabindex="-1">
+  <h2>Contact</h2>
+  <p>Email: <a href="mailto:mouedhabidi9@gmail.com">mouedhabidi9@gmail.com</a></p>
+  <p>
+    <a href="https://github.com/Mo-not-afk" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">GitHub</a>
+  </p>
+</section>
+</main>
+
+<footer>
+  &copy; 2025 Mouadh Abidi – Information Engineering Student at HAW Hamburg
+</footer>
+
+</body>
+</html>
