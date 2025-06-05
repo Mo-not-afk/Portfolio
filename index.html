@@ -1,129 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Mouadh Abidi – Information Engineering Student | HAW Hamburg</title>
-<style>
-  /* Reset & base */
-  * {
-    box-sizing: border-box;
-  }
-  body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    background-color: #f9f9f9;
-    color: #222;
-    scroll-behavior: smooth;
-    line-height: 1.6;
-  }
-  a {
-    color: #007acc;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  a:hover,
-  a:focus {
-    text-decoration: underline;
-    color: #005a9e;
-    outline: none;
-  }
-  header {
-    background-color: #003366;
-    color: white;
-    padding: 2rem 1rem;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-  header h1 {
-    margin: 0;
-    font-size: 2.4rem;
-  }
-  header p {
-    margin: 0.3rem 0 0;
-    font-weight: 300;
-    font-size: 1.15rem;
-  }
-  nav {
-    margin-top: 1.2rem;
-  }
-  nav a {
-    margin: 0 1.2rem;
-    font-weight: 600;
-    font-size: 1.15rem;
-  }
-  section {
-    max-width: 900px;
-    margin: 3rem auto;
-    padding: 0 1rem;
-  }
-  h2 {
-    border-bottom: 3px solid #007acc;
-    padding-bottom: 0.3rem;
-    margin-bottom: 1.5rem;
-    color: #003366;
-  }
-  /* About */
-  #about p {
-    font-size: 1.15rem;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  /* Projects */
-  .project-list {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  .project-list li {
-    background: white;
-    margin-bottom: 1.3rem;
-    padding: 1.2rem 1.8rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    font-size: 1.15rem;
-    line-height: 1.5;
-  }
-  /* Contact */
-  #contact p {
-    font-size: 1.15rem;
-    margin-bottom: 0.7rem;
-    text-align: center;
-  }
-  #contact a {
-    display: inline-block;
-    margin: 0 1rem;
-    font-weight: 600;
-  }
-  /* Footer */
-  footer {
-    text-align: center;
-    padding: 2rem 1rem;
-    color: #666;
-    font-size: 0.9rem;
-  }
-
-  /* Responsive tweaks */
-  @media (max-width: 600px) {
-    header h1 {
-      font-size: 1.8rem;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Mouadh Abidi – Information Engineering student at HAW Hamburg with interests in embedded systems, web development, and robotics.">
+  <meta name="keywords" content="Mouadh Abidi, Information Engineering, HAW Hamburg, Embedded Systems, Web Development, Arduino, Robotics">
+  <meta name="author" content="Mouadh Abidi">
+  <meta property="og:title" content="Mouadh Abidi – Information Engineering Student | HAW Hamburg" />
+  <meta property="og:description" content="Portfolio website of Mouadh Abidi, a student passionate about software and embedded systems." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>Mouadh Abidi – Information Engineering Student | HAW Hamburg</title>
+  <style>
+    @font-face {
+      font-family: 'Segoe UI';
+      src: local('Segoe UI'), local('Tahoma'), local('Geneva'), local('Verdana'), local('sans-serif');
+      font-display: swap;
     }
-    nav a {
-      margin: 0 0.6rem;
-      font-size: 1rem;
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+      color: #222;
+      scroll-behavior: smooth;
+      line-height: 1.6;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+      color: #005a9e;
+      outline: none;
+    }
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.4rem;
+    }
+    header p {
+      margin: 0.3rem 0 0;
+      font-weight: 300;
+      font-size: 1.15rem;
+    }
+    nav {
+      margin-top: 1.2rem;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+    }
+    nav li a {
+      font-weight: 600;
+      font-size: 1.15rem;
+    }
+    nav a.active {
+      color: #005a9e;
+      border-bottom: 2px solid #007acc;
     }
     section {
-      margin: 2rem 1rem;
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    h2 {
+      border-bottom: 3px solid #007acc;
+      padding-bottom: 0.3rem;
+      margin-bottom: 1.5rem;
+      color: #003366;
+    }
+    #about p {
+      font-size: 1.15rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .project-list {
+      list-style-type: none;
+      padding-left: 0;
     }
     .project-list li {
-      padding: 1rem 1.2rem;
+      background: white;
+      margin-bottom: 1.3rem;
+      padding: 1.2rem 1.8rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      font-size: 1.15rem;
+    }
+    #contact p {
+      font-size: 1.15rem;
+      margin-bottom: 0.7rem;
+      text-align: center;
+    }
+    #contact form {
+      max-width: 400px;
+      margin: 0 auto 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+    #contact input, #contact textarea {
+      padding: 0.5rem;
+      border: 1px solid #bbb;
+      border-radius: 4px;
       font-size: 1rem;
     }
-  }
-</style>
+    #contact input:focus, #contact textarea:focus {
+      outline: 2px solid #007acc;
+    }
+    #contact button {
+      background: #007acc;
+      color: #fff;
+      border: none;
+      padding: 0.7rem 1.2rem;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    #contact button:hover {
+      background: #005a9e;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #666;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      nav li a {
+        font-size: 1rem;
+      }
+      section {
+        margin: 2rem 1rem;
+      }
+      .project-list li {
+        padding: 1rem 1.2rem;
+        font-size: 1rem;
+      }
+    }
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #181a1b;
+        color: #f1f1f1;
+      }
+      header {
+        background-color: #111c2b;
+      }
+      h2 {
+        color: #7ecfff;
+        border-bottom-color: #7ecfff;
+      }
+      .project-list li {
+        background: #23272b;
+        color: #f1f1f1;
+      }
+      footer {
+        color: #aaa;
+      }
+      a {
+        color: #7ecfff;
+      }
+      a:hover, a:focus {
+        color: #4fa3e3;
+      }
+    }
+  </style>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 </head>
 <body>
 
@@ -131,43 +203,98 @@
   <h1>Mouadh Abidi</h1>
   <p>Information Engineering Student – HAW Hamburg</p>
   <nav aria-label="Primary navigation">
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
   </nav>
 </header>
 
 <main>
-<section id="about" tabindex="-1">
-  <h2>About Me</h2>
-  <p>
-    I am a dedicated Information Engineering student at HAW Hamburg, passionate about software construction, web design, and innovative technology solutions.  
-    Skilled in programming, system design, and embedded systems, I enjoy working on projects that combine software and hardware to solve real-world problems.
-  </p>
-</section>
+  <section id="about" tabindex="-1">
+    <h2>About Me</h2>
+    <p>
+      I am a dedicated Information Engineering student at HAW Hamburg, passionate about software construction, web design, and innovative technology solutions.  
+      Skilled in programming, system design, and embedded systems, I enjoy working on projects that combine software and hardware to solve real-world problems.
+    </p>
+  </section>
 
-<section id="projects" tabindex="-1">
-  <h2>Projects</h2>
-  <ul class="project-list">
-    <li><strong>Arduino Projects:</strong> Developing embedded systems with sensors, LEDs, and microcontrollers for automation and interactive applications.</li>
-    <li><strong>Robotics:</strong> Designing and programming robotic systems focused on automation, control, and intelligent behavior.</li>
-    <li><strong>Electrical Engineering Labs:</strong> Practical experiments involving circuits, signal processing, and digital systems.</li>
-    <li><strong>Software Construction:</strong> Building efficient, maintainable software applications using modern programming techniques and best practices.</li>
-  </ul>
-</section>
+  <section id="projects" tabindex="-1">
+    <h2>Projects</h2>
+    <ul class="project-list">
+      <li><strong>Arduino Projects:</strong> Developing embedded systems with sensors, LEDs, and microcontrollers for automation and interactive applications.</li>
+      <li><strong>Robotics:</strong> Designing and programming robotic systems focused on automation, control, and intelligent behavior.</li>
+      <li><strong>Electrical Engineering Labs:</strong> Practical experiments involving circuits, signal processing, and digital systems.</li>
+      <li><strong>Software Construction:</strong> Building efficient, maintainable software applications using modern programming techniques and best practices.</li>
+    </ul>
+  </section>
 
-<section id="contact" tabindex="-1">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:mouedhabidi9@gmail.com">mouedhabidi9@gmail.com</a></p>
-  <p>
-    <a href="https://github.com/Mo-not-afk" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">GitHub</a>
-  </p>
-</section>
+  <section id="contact" tabindex="-1" aria-label="Contact">
+    <h2>Contact</h2>
+    <form id="contactForm" action="mailto:mouedhabidi9@gmail.com" method="POST" enctype="text/plain">
+      <label for="name">Name:</label>
+      <input id="name" name="name" type="text" required aria-label="Name" autocomplete="name">
+      <label for="email">Email:</label>
+      <input id="email" name="email" type="email" required aria-label="Email" autocomplete="email">
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required aria-label="Message" autocomplete="off"></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p><a href="mailto:mouedhabidi9@gmail.com">mouedhabidi9@gmail.com</a></p>
+    <p>
+      <a href="https://github.com/Mo-not-afk" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">GitHub</a>
+    </p>
+    <p>
+      <a href="cv.pdf" download aria-label="Download CV">Download CV (PDF)</a>
+    </p>
+  </section>
 </main>
 
 <footer>
   &copy; 2025 Mouadh Abidi – Information Engineering Student at HAW Hamburg
 </footer>
 
+<button id="backToTop" aria-label="Back to top" title="Back to top" style="display:none;position:fixed;bottom:2rem;right:2rem;z-index:999;background:#007acc;color:#fff;border:none;border-radius:50%;width:48px;height:48px;font-size:1.5rem;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.15);">↑</button>
+
+<script>
+  const btn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    btn.style.display = window.scrollY > 300 ? 'block' : 'none';
+  });
+  btn.onclick = () => window.scrollTo({top:0, behavior:'smooth'});
+</script>
+<script>
+  const navLinks = document.querySelectorAll('nav a');
+  const sections = Array.from(document.querySelectorAll('main section'));
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(sec => {
+      const secTop = sec.offsetTop - 120;
+      if (window.scrollY >= secTop) current = sec.id;
+    });
+    navLinks.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+    });
+  });
+</script>
+<script>
+  document.querySelectorAll('section').forEach(sec => {
+    sec.style.opacity = 0;
+    sec.style.transform = 'translateY(40px)';
+  });
+  function revealSections() {
+    document.querySelectorAll('section').forEach(sec => {
+      const rect = sec.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 80) {
+        sec.style.transition = 'opacity 0.7s, transform 0.7s';
+        sec.style.opacity = 1;
+        sec.style.transform = 'none';
+      }
+    });
+  }
+  window.addEventListener('scroll', revealSections);
+  window.addEventListener('DOMContentLoaded', revealSections);
+</script>
 </body>
 </html>
